@@ -1,11 +1,11 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
-import '../images/logo.png';
 import '../css/style.css';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
+
 
 const loadSpinner = () => {
   const spinner = document.createElement('div');
