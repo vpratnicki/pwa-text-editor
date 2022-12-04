@@ -19,13 +19,15 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Webpack Plugin',
+        title: 'Text Editor',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: 'JATE Application',
         short_name: 'jate',
         description: 'Just another text editor',
@@ -38,12 +40,6 @@ module.exports = () => {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
-          },
-          {
-            src: path.resolve('src/images/logo.png'),
-            size: '1024x1024',
-            destination: path.join('assets', 'icons'),
-            purpose: 'maskable'
           }
         ],
       }),
@@ -61,8 +57,9 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: [
-                ['@babel/preset-env', { targets: "defaults" }]
-              ]
+                ['@babel/preset-env']
+              ],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
             }
           }
         }
