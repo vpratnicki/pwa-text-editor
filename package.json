@@ -11,6 +11,7 @@
     "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
     "client": "cd client && npm start",
     "heroku-prebuild": "npm install --dev"
+
   },
   "engines": {
     "node": "v16.17.0"
