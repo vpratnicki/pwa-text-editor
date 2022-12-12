@@ -22,6 +22,12 @@ The following steps are how to install and set up the application:
 
 To use this app, install the npm packages, and run `npm start` from the root directory. Then open [http://localhost:3000/](http://localhost:3000/) to run this application on your local machine.
 
+## Screenshots
+
+![Screen shot of app in broswer and service worker](/client/src/images/JATE1.png)
+![Screen shot of installed app](/client/src/images/JATE2.png)
+![Screen shot of indexDB](/client/src/images/JATE3.png)
+
 ## Deployed Link
 
 The application has been deployed to Heroku: [https://hidden-dusk-64273.herokuapp.com/](https://hidden-dusk-64273.herokuapp.com/)
